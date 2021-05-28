@@ -1,0 +1,9 @@
+COLUMN TABLE "PERFORMANCE"(
+    "ID" INTEGER unique not null comment 'Employee ID',
+    "EVALUATION_RATING" DOUBLE comment 'Evaluation Results',
+    "REPORTS_TO" INTEGER not null COMMENT 'Reports to manager',
+    "FEEDBACK_COMMENT" NVARCHAR(512) comment 'Feedback comment',
+    "SATISFACTION_INDEX" double comment 'Employee given rating',
+    PRIMARY key ("ID")
+)
+comment 'Performance evaluation record'
