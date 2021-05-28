@@ -2,9 +2,20 @@ _schema-version: "2.1"
 ID: Demo1
 version: 0.0.1
 modules:
-- name: db
+- name: demo-srv
+  type: nodejs
+  path: gen/srv
+  requires:
+    - name: hdi_db
+  provides:
+    - name: srv-api
+      properties:
+        srv-url: ${default-url}
+- name: demo-db
   type: hdb
-  path: db
+  path: gen/db
+  parameters:
+    buildpack: nodejs_buildpack
   requires:
   - name: hdi_db
     properties:
@@ -13,6 +24,8 @@ resources:
 - name: hdi_db
   type: com.sap.xs.hdi-container
   parameters:
+    service: hana
+    service-plan: hdi-shared
     config:
       database_id: c257e69e-fcbd-4b6c-a10d-2c26442828d5
   properties:
