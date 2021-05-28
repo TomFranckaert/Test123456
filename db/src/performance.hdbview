@@ -1,0 +1,13 @@
+VIEW "PERFORMANCE_VIEW" comment 'Performance view'(
+    "ID",
+    "EVALUATION_RATING",
+    "REPORTS_TO",
+    "FEEDBACK_COMMENT",
+    "SATISFACTION_INDEX"
+) AS SELECT 
+    "Performance_$0"."ID",
+    "Performance_$0"."EVALUATION_RATING",
+    "Performance_$0"."REPORTS_TO",
+    "Performance_$0"."FEEDBACK_COMMENT",
+    "Performance_$0"."SATISFACTION_INDEX"
+FROM "PERFORMANCE" AS "Performance_$0"
