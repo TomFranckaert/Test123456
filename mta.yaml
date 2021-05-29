@@ -11,7 +11,7 @@ modules:
     - name: hdi_db
       properties:
         TARGET_CONTAINER: ~{hdi-container-name}
-  provides:
+  provides:9
     - name: srv-api
       properties:
         srv-url: ${default-url}
