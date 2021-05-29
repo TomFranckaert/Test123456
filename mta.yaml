@@ -4,9 +4,13 @@ version: 0.0.1
 modules:
 - name: demo-srv
   type: nodejs
-  path: gen/srv
+  path: gen/srv/srv
+  parameters:
+    buildpack: nodejs_buildpack
   requires:
     - name: hdi_db
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
   provides:
     - name: srv-api
       properties:
