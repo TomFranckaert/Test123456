@@ -1,5 +1,5 @@
 @cds.persistance.exists
-entity![PERFORMANCE_VIEW]{
+entity![PERFORMANCE_VIEW1]{
     key![ID]                 : Integer    @title : 'ID';
        ![EVALUATION_RATING]  : Double     @title : 'EVALUATION_RATING';
        ![REPORTS_TO]         : Integer    @title : 'REPORTS_TO';
